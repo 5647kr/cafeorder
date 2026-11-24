@@ -1,8 +1,12 @@
 import { CircleChevronLeft } from "lucide-react";
 import { Link } from "react-router";
 import Header from "../../components/Header";
+import useOrderStore from "../../store/useOrderStore";
 
 export default function Menu() {
+  const order = useOrderStore((state) => state.order);
+
+  console.log(order);
   return (
     <>
       <Header>
