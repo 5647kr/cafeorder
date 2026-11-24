@@ -1,1 +1,22 @@
 @import "./tailwind.css";
+
+:root {
+  --text: #252525;
+  --text-sub: #666;
+  --text-disabled: #a3a3a3;
+  --bg: #fff;
+  --bg-disabled: #eeeeec;
+  --cancel: #d94a45;
+  --btn-none: #eaeae8;
+  --border: #d9d9d6;
+  --border-sub: #3232df;
+  --accent: #e9a23b;
+  --accent-sub: #e58b25;
+  --secondary: #333;
+  --frame: #222;
+}
+
+html {
+  background: var(--bg);
+  color: var(--text);
+}

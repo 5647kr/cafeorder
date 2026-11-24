@@ -1,7 +1,13 @@
+import Header from "../../components/Header";
+
 export default function Home() {
   return (
     <>
-      <h1>Home Component</h1>
+      <Header>
+        <h1 className="font-bold">CafeOrder</h1>
+      </Header>
+
+      <main></main>
     </>
   );
 }
