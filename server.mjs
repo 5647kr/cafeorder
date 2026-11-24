@@ -57,7 +57,7 @@ const items = [
     description:
       "깊고 진한 에스프레소가 선사하는 깔끔한 풍미! 한 모금으로 하루의 시작을 깨워보세요.",
     price: 4500,
-    iconImg: "/public/",
+    iconImg: "/public/americano.png",
     optionIds: [1, 2, 3],
   },
   {
@@ -67,7 +67,7 @@ const items = [
     description:
       "진한 에스프레소와 부드러운 우유가 만나 완성된 고소하고 편안한 한 잔을 즐겨보세요.",
     price: 5000,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [1, 2, 3, 6],
   },
   {
@@ -77,7 +77,7 @@ const items = [
     description:
       "부드러운 우유에 달콤한 바닐라 향을 더해 누구나 기분 좋게 즐길 수 있는 라떼입니다.",
     price: 5500,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [1, 2, 3, 6, 7],
   },
   {
@@ -87,7 +87,7 @@ const items = [
     description:
       "부드러운 우유와 에스프레소 위에 달콤한 카라멜을 더해 풍성한 맛과 향을 즐겨보세요.",
     price: 5800,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [1, 2, 3, 6, 8],
   },
   {
@@ -97,7 +97,7 @@ const items = [
     description:
       "차가운 물로 천천히 추출해 깔끔하고 깊은 풍미를 담았습니다. 부드러운 커피의 여운을 느껴보세요.",
     price: 4800,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [2, 3, 5],
   },
   {
@@ -107,7 +107,7 @@ const items = [
     description:
       "진한 에스프레소와 풍성한 우유 거품이 어우러져 부드러움과 커피 본연의 풍미를 함께 느껴보세요.",
     price: 5000,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [1, 2, 3, 6],
   },
   {
@@ -117,7 +117,7 @@ const items = [
     description:
       "진한 에스프레소와 풍성한 우유 거품이 어우러져 부드러움과 커피 본연의 풍미를 함께 느껴보세요.",
     price: 5800,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [1, 2, 3, 6, 8],
   },
   {
@@ -127,7 +127,7 @@ const items = [
     description:
       "진한 에스프레소와 풍성한 우유 거품이 어우러져 부드러움과 커피 본연의 풍미를 함께 느껴보세요.",
     price: 6000,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [3, 12],
   },
   {
@@ -137,7 +137,7 @@ const items = [
     description:
       "상큼한 자몽의 싱그러움을 한 잔에! 달콤쌉싸름한 향이 기분까지 환하게 밝혀줍니다.",
     price: 6000,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [1, 2, 4],
   },
   {
@@ -147,7 +147,7 @@ const items = [
     description:
       "상쾌한 달콤함이 가득한 한 잔! 더운 날엔 시원한 아이스티로 갈증을 해소하세요.",
     price: 4500,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [2, 4, 5],
   },
   {
@@ -157,7 +157,7 @@ const items = [
     description:
       "쫀득한 타피오카 펄과 달콤한 밀크티의 환상적인 만남! 한입마다 기분 좋은 재미가 가득해요.",
     price: 6000,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [1, 2, 4, 5],
   },
   {
@@ -167,7 +167,7 @@ const items = [
     description:
       "쌉싸름하고 향긋한 말차와 부드러운 우유가 조화를 이루는 차분하고 고소한 한 잔입니다.",
     price: 5800,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [1, 2, 4, 6],
   },
   {
@@ -177,7 +177,7 @@ const items = [
     description:
       "달콤하고 상큼한 딸기의 풍미에 부드러운 우유를 더해 산뜻한 달콤함을 가득 담았습니다.",
     price: 5800,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [1, 2, 4, 6],
   },
   {
@@ -187,7 +187,7 @@ const items = [
     description:
       "톡 쏘는 탄산과 상큼한 레몬의 조합! 입안 가득 퍼지는 시원함으로 기분까지 상쾌하게 만들어보세요.",
     price: 5500,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [2, 4, 5],
   },
   {
@@ -197,7 +197,7 @@ const items = [
     description:
       "바삭한 겉과 달콤한 팥이 가득한 속! 추억을 불러일으키는 따뜻한 붕어빵으로 겨울 감성을 느껴보세요.",
     price: 1800,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [9, 10],
   },
   {
@@ -207,7 +207,7 @@ const items = [
     description:
       "바삭하고 촉촉한 와플 위에 달콤한 시럽과 신선한 토핑까지! 여유로운 티타임에 딱 맞는 디저트.",
     price: 3300,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [10, 12],
   },
   {
@@ -217,7 +217,7 @@ const items = [
     description:
       "든든하게 즐기는 한 끼! 신선한 재료를 가득 담아 맛과 영양을 동시에 챙겼어요.",
     price: 4100,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [10, 11],
   },
   {
@@ -227,7 +227,7 @@ const items = [
     description:
       "진한 초콜릿의 달콤함과 묵직하고 촉촉한 식감이 어우러진 한 조각의 달콤한 행복을 만나보세요.",
     price: 3500,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [13, 12],
   },
   {
@@ -237,7 +237,7 @@ const items = [
     description:
       "부드럽고 진한 크림치즈의 풍미와 달콤한 여운이 입안 가득 퍼지는 클래식한 치즈케이크입니다.",
     price: 4500,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [12],
   },
   {
@@ -247,7 +247,7 @@ const items = [
     description:
       "겹겹이 쌓인 결이 바삭하게 부서지고 속은 부드럽고 고소한 버터 향이 가득한 크루아상입니다.",
     price: 3000,
-    iconImg: "/public/",
+    iconImg: "/public/cafemoka.png",
     optionIds: [13, 10],
   },
 ];
@@ -347,7 +347,7 @@ app.get("/api/categories", (c) => {
 
 // 상품 목록 가져오기: GET http://localhost:5173/api/items
 app.get("/api/items", (c) => {
-  const itemList = items.map(({ optionIds, ...item }) => item);
+  const itemList = items.map(({ optionIds, description, ...item }) => item);
 
   return c.json(itemList);
 });
