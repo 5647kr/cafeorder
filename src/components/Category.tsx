@@ -1,21 +1,19 @@
-export default function Category({
-  activeCategory,
-  handleActiveCategory,
-}: {
-  activeCategory: string;
-  handleActiveCategory: (value: string) => void;
-}) {
+import useCategoryStore from "../store/useCategoryStore";
+
+export default function Category() {
+  const category = useCategoryStore((state) => state.category);
+  const handleCategory = useCategoryStore((state) => state.handleCategory);
   const categories = ["커피", "음료", "디저트"];
   return (
     <section className="bg-(--secondary) p-5">
       <ul className="flex items-center gap-5">
-        {categories.map((category, index) => (
+        {categories.map((cate, index) => (
           <li key={index} className="w-full">
             <button
               type="button"
-              onClick={() => handleActiveCategory(category)}
-              className={`p-3 w-full text-lg font-bold ${activeCategory === category ? "bg-(--accent)" : " bg-(--bg)"}`}>
-              {category}
+              onClick={() => handleCategory(cate)}
+              className={`p-3 w-full text-lg font-bold ${cate === category ? "bg-(--accent)" : " bg-(--bg)"}`}>
+              {cate}
             </button>
           </li>
         ))}

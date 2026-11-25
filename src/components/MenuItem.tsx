@@ -1,4 +1,5 @@
 import { CakeSlice, Coffee, CupSoda } from "lucide-react";
+import useCategoryStore from "../store/useCategoryStore";
 
 export function MenuItem({ menu }: { menu: Menus }) {
   return (
@@ -18,12 +19,13 @@ export function MenuItem({ menu }: { menu: Menus }) {
   );
 }
 
-export function MenuSkeleton({ activeCategory }: { activeCategory: string }) {
+export function MenuSkeleton() {
+  const category = useCategoryStore((state) => state.category);
   return (
     <div className="border border-(--border)">
       {/* 이미지 */}
       <div className="p-12 flex items-center justify-center">
-        {activeCategory === "커피" && (
+        {category === "커피" && (
           <Coffee
             strokeWidth={1}
             size={50}
@@ -31,7 +33,7 @@ export function MenuSkeleton({ activeCategory }: { activeCategory: string }) {
             className="mx-auto"
           />
         )}
-        {activeCategory === "음료" && (
+        {category === "음료" && (
           <CupSoda
             strokeWidth={1}
             size={50}
@@ -39,7 +41,7 @@ export function MenuSkeleton({ activeCategory }: { activeCategory: string }) {
             className="mx-auto"
           />
         )}
-        {activeCategory === "디저트" && (
+        {category === "디저트" && (
           <CakeSlice
             strokeWidth={1}
             size={50}

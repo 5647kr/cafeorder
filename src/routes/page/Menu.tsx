@@ -7,13 +7,14 @@ import { fetchMenus } from "../../api/fetchData";
 import { MenuItem, MenuSkeleton } from "../../components/MenuItem";
 import useOrderStore from "../../store/useOrderStore";
 import { toast } from "sonner";
+import useCategoryStore from "../../store/useCategoryStore";
 
 export default function Menu() {
+  const order = useOrderStore((state) => state.order);
+  const category = useCategoryStore((state) => state.category);
   const [menus, setMenus] = useState<Menus[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMsg, setErrorMsg] = useState<null | string>(null);
-  const [activeCategory, setActiveCategory] = useState("커피");
-  const order = useOrderStore((state) => state.order);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,13 +32,7 @@ export default function Menu() {
     fetchData();
   }, [errorMsg]);
 
-  const handleActiveCategory = (value: string) => {
-    setActiveCategory(value);
-  };
-
-  const filteredMenus = menus.filter(
-    (menu) => menu.category === activeCategory,
-  );
+  const filteredMenus = menus.filter((menu) => menu.category === category);
 
   return (
     <>
@@ -50,10 +45,7 @@ export default function Menu() {
 
       <main className="relative">
         {/* 커피, 음료, 디저트 카테고리 */}
-        <Category
-          activeCategory={activeCategory}
-          handleActiveCategory={handleActiveCategory}
-        />
+        <Category />
 
         {/* 제품 목록 */}
         <section className="p-5">
@@ -62,7 +54,7 @@ export default function Menu() {
               <>
                 {Array.from({ length: 10 }).map((_, index) => (
                   <li key={index}>
-                    <MenuSkeleton activeCategory={activeCategory} />
+                    <MenuSkeleton />
                   </li>
                 ))}
               </>

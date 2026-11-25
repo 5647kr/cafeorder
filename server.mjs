@@ -28,8 +28,8 @@
 
 /** 옵션
  * 음료
- * 1. 온도: hot / ice / 아이콘 2개
- * 2. 사이즈: Regular(+0) / Large(+700) / 컵 사이즈 아이콘 2개
+ * 1. 온도: hot / ice / 아이콘 2개 필수
+ * 2. 사이즈: Regular(+0) / Large(+700) / 컵 사이즈 아이콘 2개 필수
  * 3. 샷 추가: 기본(+0) / 샷 추가(+500) / 텍스트
  * 4. 당도: 50%(+0), 100%(+0), 125%(+0), 150%(+0), / 텍스트
  * 5. 얼음량: 적게(+0) / 보통(+0) / 많이(+0) / 텍스트
@@ -38,7 +38,7 @@
  * 8. 휘핑 크림: 추가(+500) / 아이콘
  *
  * 디저트
- * 9. 속재료: 팥(+0) / 슈크림(+0) / 고구마(+0) / 아이콘
+ * 9. 속재료: 팥(+0) / 슈크림(+0) / 고구마(+0) / 아이콘 필수
  * 10. 굽기: 보통(+0) / 바삭하게(+500) / 텍스트
  * 11. 토핑: 치즈(+500) / 양상추(+500) / 계란후라이(+1000) / 토마토(+500) / 파인애플(+500) / 베이컨(+1500) / 아이콘
  * 12. 추가 토핑: 초코시럽(+500) / 메이플시럽(+500)  / 휘핑크림(+500) / 아이콘3개인데 휘핑크림 뺴고
@@ -256,39 +256,62 @@ const options = [
   {
     id: 1,
     name: "온도",
-    col: 2,
     labels: ["HOT", "ICE"],
     icons: ["/public/hot.png", "/public/ice.png"],
+    require: true,
+    // 단일 선택
+    maxSelect: 1,
+    default: "HOT",
   },
   {
     id: 2,
     name: "사이즈",
     labels: ["Regular", "Large"],
     prices: [0, 700],
+    require: true,
+    // 단일 선택
+    maxSelect: 1,
+    default: "Regular",
   },
   {
     id: 3,
     name: "샷 추가",
     labels: ["기본", "샷 추가"],
     prices: [0, 500],
+    require: false,
+    // 단일 선택
+    maxSelect: 1,
+    default: "기본",
   },
   {
     id: 4,
     name: "당도",
     labels: ["50%", "100%", "125%", "150%"],
     prices: [0, 0, 0, 0],
+    require: false,
+    // 단일 선택
+    maxSelect: 1,
+    default: "100%",
   },
   {
     id: 5,
     name: "얼음량",
     labels: ["적게", "보통", "많이"],
     prices: [0, 0, 0, 0],
+    require: false,
+    // 단일 선택
+    maxSelect: 1,
+    default: "보통",
   },
   {
     id: 6,
     name: "우유 변경",
     labels: ["일반 우유", "저지방 우유", "오트밀크"],
     prices: [0, 0, 700],
+    require: false,
+    // 단일 선택
+    maxSelect: 1,
+    default: "일반 우유",
   },
   {
     id: 7,
@@ -296,13 +319,21 @@ const options = [
     labels: ["바닐라", "헤이즐넛", "카라멜"],
     prices: [500, 500, 500],
     icons: ["/public/hot.png", "/public/ice.png"],
+    require: false,
+    // 다중 선택
+    maxSelect: 3,
+    default: "",
   },
   {
     id: 8,
-    name: "희핑 크림",
+    name: "휘핑 크림",
     labels: ["추가 안함", "추가"],
     prices: [0, 500],
     icons: ["/public/hot.png"],
+    require: false,
+    // 단일 선택
+    maxSelect: 1,
+    default: "추가 안함",
   },
   {
     id: 9,
@@ -310,30 +341,51 @@ const options = [
     labels: ["팥", "슈크림", "고구마"],
     prices: [0, 0, 0],
     icons: ["/public/hot.png", "/public/hot.png", "/public/hot.png"],
+    require: true,
+    // 단일 선택
+    maxSelect: 1,
+    default: "팥",
   },
   {
     id: 10,
     name: "굽기",
     labels: ["보통", "바삭하게"],
     prices: [0, 500],
+    require: false,
+    // 단일 선택
+    maxSelect: 1,
+    default: "보통",
   },
   {
     id: 11,
     name: "토핑",
     labels: ["치즈", "양상추", "계란후라이", "토마토", "파인애플", "베이컨"],
     prices: [500, 500, 1000, 500, 500, 1500],
+    require: false,
+    // 다중 선택
+    maxSelect: 6,
+    default: "",
   },
   {
     id: 12,
     name: "추가 토핑",
     labels: ["초코 시럽", "메이플 시럽", "휘핑 크림"],
     prices: [500, 500, 500],
+    require: false,
+    // 다중 선택
+    maxSelect: 2,
+    default: "",
   },
   {
     id: 13,
     name: "데우기",
     labels: ["데우기", "데우지 않기"],
     prices: [0, 0],
+    require: false,
+    // 단일 선택
+    maxSelect: 1,
+    // 기본값
+    defaultValue: "데우기",
   },
 ];
 

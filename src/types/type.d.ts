@@ -11,6 +11,7 @@ interface Menus {
 interface Menu extends Menus {
   description: string;
   optionIds: number[];
+  options: Options[];
 }
 
 // 주문하려는 메뉴
@@ -26,8 +27,9 @@ interface OrderMenu {
 // 선택한 옵션
 interface SelectedOpt {
   id: number;
-  label: string;
-  price: number;
+  name: string;
+  price: number[];
+  value: string[];
 }
 
 // 주문 내역
@@ -36,4 +38,16 @@ interface Order {
   orderMenu: OrderMenu[];
   totalPrice: number;
   orderId: string;
+}
+
+// 옵션
+interface Options {
+  id: number;
+  name: string;
+  labels: string[];
+  prices?: number[];
+  icons?: string[];
+  require: boolean;
+  maxSelect: number;
+  default: string;
 }
